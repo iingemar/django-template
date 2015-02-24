@@ -1,11 +1,11 @@
 # django-template
 Django 1.7.4 template
 
-- Create virtual environment
+<strong>Create virtual environment</strong>
 virtualenv venv
 
-- Start virtual environment
+<strong>Start virtual environment</strong>
 source venv/bin/activate
 
-- Install all dependencies
+<strong>Install all dependencies</strong>
 pip install -r requirements.txt
