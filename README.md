@@ -2,7 +2,7 @@
 Django 1.7.4 template
 <br/>
 <br/>
-<strong>Create virtual environment<strong><br/>
+<strong>Create virtual environment</strong><br/>
 virtualenv venv<br/>
 <br/>
 <strong>Start virtual environment</strong><br/>
