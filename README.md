@@ -1,9 +1,5 @@
 # django-template
-<p>
-Django 1.7.4 template<br/>
-With Bootstrap</br>
-jQuery</br>
-</p>
+<p>Django 1.7.4 template with bootstrap and jquery.</p>
 
 <ol>
     <li>
