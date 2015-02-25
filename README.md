@@ -23,7 +23,7 @@
     </li>
 </ol>
 
-<strong>TL;DR</strong>
-<p>virtualenv venv;source venv/bin/activate;pip install -r requirements.txt;python manage.py runserver</p>
+<strong>TL;DR</strong><br/>
+<code>virtualenv venv;source venv/bin/activate;pip install -r requirements.txt;python manage.py runserver</code>
 
 
