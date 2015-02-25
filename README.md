@@ -3,22 +3,22 @@
 
 <ol>
     <li>
-    Create virtual environment
+    Create virtual environment<br/>
     <code>virtualenv venv</code>
     </li>
 
     <li>
-    Start virtual environment
+    Start virtual environment<br/>
     <code>source venv/bin/activate</code>
     </li>
 
     <li>
-    Install all dependencies
+    Install all dependencies<br/>
     <code>pip install -r requirements.txt</code>
     </li>
 
     <li>
-    Run!
+    Run!<br/>
     <code>python manage.py runserver</code>
     </li>
 </ol>
