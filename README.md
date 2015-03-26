@@ -26,5 +26,8 @@
 <strong>TL;DR</strong><br/>
 <code>virtualenv venv;source venv/bin/activate;pip install -r requirements.txt;python manage.py runserver</code>
 
-Might have to run migrate too.
+Might have to run migrate too.<br/>
 <code>python manage.py migrate</code>
+
+And change the remote origin.<br/>
+<code>git remote set-url orgin [ADD_GIT_REPO_HERE]</code>
