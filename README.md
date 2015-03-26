@@ -26,4 +26,5 @@
 <strong>TL;DR</strong><br/>
 <code>virtualenv venv;source venv/bin/activate;pip install -r requirements.txt;python manage.py runserver</code>
 
-
+Might have to run migrate too.
+<code>python manage.py migrate</code>
