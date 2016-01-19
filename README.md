@@ -26,6 +26,16 @@
     Run<br/>
     <code>python manage.py runserver</code>
     </li>
+    
+    <li>
+    Another terminal! Install all npm dependencies<br/>
+    <code>npm install</code>
+    </li>
+    
+    <li>
+    Start webpack watcher
+    <code>webpack --watch</code>
+    </li>
 </ol>
 
 <strong>TL;DR</strong><br/>
