@@ -22,8 +22,6 @@ SECRET_KEY = '%glftnam*!k+elz-9#ta)pq)-z8afn*w=-d-x71(+qo@13y=&8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
-
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
@@ -100,6 +98,21 @@ STATIC_ROOT = 'staticfiles'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            'templates'
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'django.contrib.auth.context_processors.auth': True
+        },
+        'TEMPLATE_DEBUG': True
+
+    },
+]
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
