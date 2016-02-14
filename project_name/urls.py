@@ -1,9 +1,10 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import url
 from django.contrib import admin
+from app_name import views
 
-urlpatterns = patterns('',
-    url(r'^$', 'app_name.views.index', name='index'),
-    # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
-)
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+    
+    url(r'^admin/', admin.site.urls),
+]
