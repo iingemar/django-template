@@ -154,10 +154,12 @@ PIPELINE = {
     'STYLESHEETS': {
         'main': {
             'source_filenames': (
-              'css/colors.css',
-              'css/main.css',
+              'css/main.less',
             ),
             'output_filename': 'css/main-compressed.css'
         },
     }
 }
+PIPELINE['COMPILERS'] = (
+  'pipeline.compilers.less.LessCompiler',
+)
