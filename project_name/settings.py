@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '5^a!10fh)d=7xl2b$jxa&@o@no9slqwpy%y#inx%)k2+5ptbqg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pipeline',
     'app_name'
 ]
 
@@ -143,23 +142,4 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Add gzip and caching support
-STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
-
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'pipeline.finders.PipelineFinder',
-)
-PIPELINE = {
-    'STYLESHEETS': {
-        'main': {
-            'source_filenames': (
-              'css/main.less',
-            ),
-            'output_filename': 'css/main-compressed.css'
-        },
-    }
-}
-PIPELINE['COMPILERS'] = (
-  'pipeline.compilers.less.LessCompiler',
-)
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
