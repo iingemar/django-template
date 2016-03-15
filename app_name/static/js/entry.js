@@ -1,4 +1,6 @@
 var content = require("./content.js");
+require("../css/main.less");
+
 
 // Test underscore
 console.log('underscore: ', _.first([5, 4, 3, 2, 1]));
@@ -15,8 +17,8 @@ var IndexView = Backbone.View.extend({
         console.log('render');
     },
 
-    click: function() {
-        console.log('click');
+    click: () =>  {
+        console.log('ES6 click');
     }
 });
 

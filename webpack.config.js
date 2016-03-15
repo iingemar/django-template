@@ -1,4 +1,5 @@
 var webpack = require("webpack");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: "./app_name/static/js/entry.js",
@@ -20,15 +21,21 @@ module.exports = {
         }),
         new webpack.ProvidePlugin({
             "Backbone": "backbone"
+        }),
+        new ExtractTextPlugin("app_name/static/css/build/styles.min.css", {
+            allChunks: true
         })
     ],
     module: {
         loaders: [
-            { test: /\.css$/, loader: "style!css" },
             {
-                test: /\.jsx?$/, // A regexp to test the require path. accepts either js or jsx
-                exclude: /node_modules/,  // excluding external libraries from your loader test.
-                loader: 'babel' // The module to load. "babel" is short for "babel-loader"
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel'
+            },
+            {
+                test: /\.less$/,
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
             }
         ]
     }
